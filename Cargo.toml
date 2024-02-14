@@ -1,0 +1,7 @@
+[package]
+name = "dotsql"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+sqlparser = { git = "https://github.com/nick96/sqlparser-rs.git", branch = "mysql-dump", features = ["visitor"] }
