@@ -56,11 +56,14 @@ fn main() {
         ControlFlow::<()>::Continue(())
     });
 
-
     println!("digraph {{");
     for (t, rs) in relationships.iter() {
-        for r in rs {
-            println!("\t{} -> {}", t, r);
+        if rs.is_empty() {
+            println!("\t{}", t);
+        } else {
+            for r in rs {
+                println!("\t{} -> {}", t, r);
+            }
         }
     }
     println!("}}");
